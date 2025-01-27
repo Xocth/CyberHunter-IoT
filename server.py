@@ -6,6 +6,7 @@ app = Bottle()
 
 # Path to the folder containing your score file
 SCORES_DIR = r"C:\Users\thisi\Documents\GitHub\CyberHunter-GAME" # Daniel Home Windows
+SCORES_DIR = r"C:\Users\COMP5266361\Documents\GitHub\CyberHunter-GAME" # Daniel Work Windows     
 SCORES_FILE = "scores.txt"
 
 @app.route('/')
