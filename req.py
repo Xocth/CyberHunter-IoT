@@ -4,7 +4,7 @@ import os
 import tkinter as tk
 import threading
 
-url = "http://127.0.0.1:8080/scores"  # Insert IPv4 Address of Host, Use http://127.0.0.1:8080 for same system
+url = "http://127.0.0.1:8080/scores"  # Insert IPv4 Address of Host, Use http://127.0.0.1:8080/scores for same system
 
 file_path = os.path.join(os.path.dirname(__file__), "scores.txt")# Installation Path
 
