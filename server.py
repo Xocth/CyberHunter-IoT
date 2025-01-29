@@ -1,7 +1,6 @@
 from bottle import Bottle, static_file, template
 import tkinter as tk
 import threading
-import ssl  # Import the ssl module
 
 app = Bottle()
 
@@ -30,11 +29,7 @@ def serve_scores():
     return static_file(SCORES_FILE, root=SCORES_DIR, download=SCORES_FILE)
 
 def run_server():
-    # Create an SSL context
-    context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-    context.load_cert_chain(certfile="certificate.crt", keyfile="private.key")
-    
-    app.run(host="0.0.0.0", port=8080, server='paste', ssl_context=context)  # Listen on all interfaces with HTTPS
+    app.run(host="0.0.0.0", port=8080)  # Listen on all interfaces
 
 if __name__ == "__main__":
     server_thread = threading.Thread(target=run_server)
